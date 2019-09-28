@@ -10,8 +10,8 @@ from typing import List
 lst = []
 d = 0
 
-my_list = [randint(-100, 100) for i in range(10)]
-#my_list = [36, -50, 81, 66, 17, 9, 15, 1, 45]
+#my_list = [randint(-100, 100) for i in range(10)]
+my_list = [36, -50, 81, 66, 17, 9, 15, 1, 45]
 
 print('1. Список произвольных целых чисел от -100 до 100:\n', my_list)
 
@@ -19,10 +19,10 @@ for el in range(len(my_list)):
 
     if my_list[el] > 0:
         d = math.sqrt(my_list[el])
-
-
-        print(d)
-
-        lst.append(int(d))
+        print(round(d,2))
+        c = d**2 - (my_list[el])
+            if (c == 0):
+                print (round(c,2))
+                lst.append(int(c))
 
 print('\nСписок, элементами которого являются квадратные корни чисел из первого списка:\n', lst)
