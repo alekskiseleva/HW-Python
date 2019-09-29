@@ -1,3 +1,5 @@
+__author__ = 'Киселева Александра'
+
 # Задача-1:
 # Дан список, заполненный произвольными целыми числами, получите новый список, элементами которого будут
 # квадратные корни элементов исходного списка, но только если результаты извлечения корня не имеют десятичной части и
@@ -6,7 +8,6 @@
 
 import math
 from random import randint
-from typing import List
 
 lst = []
 d = 0
@@ -18,7 +19,7 @@ print('1. Список произвольных целых чисел от -100 
 for el in range(len(my_list)):
 
     if my_list[el] > 0:
-        d = round(math.sqrt(my_list[el]),6)
+        d = round(math.sqrt(my_list[el]), 6)
         c = d**2 - (my_list[el])
         if c == 0:
             lst.append(int(d))
