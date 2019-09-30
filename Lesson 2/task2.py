@@ -1,3 +1,5 @@
+from typing import Any, Union
+
 __author__ = 'Киселева Александра'
 
 # Задача-2: дана дата в формате dd.mm.yyyy, например: 02.11.2013.
@@ -52,14 +54,12 @@ months = {'01': 'января',
 
 data = str(input('Введите дату в формате хх.хх.хххх: '))
 
-if data[3:5] <= str(12):
+if data[3:5] <= str(12) and data[0:2] <= str(31):
 
     for key, value in months.items():
 
         if data[3:5] == key:
             month = value
-
-elif data[3:5] <= str(31):
 
     for key, value in days.items():
 
@@ -67,6 +67,6 @@ elif data[3:5] <= str(31):
             day = value
 
 else:
-    print('Неверно введен месяц')
+    print('Некорректнный формат даты.')
 
 print('Дата в текстовом виде:', day, month, data[6:10], 'года')
