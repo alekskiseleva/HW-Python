@@ -18,7 +18,7 @@ def sort_to_max(lst_dz3):
                 lst_dz3[j] = lst_dz3[j + 1]
                 lst_dz3[j + 1] = b
 
-    return lst_dz3
+    return
 
 
 lst_dz3 = []
