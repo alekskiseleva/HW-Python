@@ -30,3 +30,10 @@ line_2 = 'GAMkgAYEOmHBSQsSUHKvSfbmxULaysmNOGIPHpEMujalpPLNzRWXfwHQqwksrFeipEUlTL
 print(re.findall('[a-z]{2}([A-Z]+)[A-Z]{2}', line_2))
 
 print(re.findall('[a-z]{2}([A-Z]+)[A-Z]{2}', line_1))
+line_3 = []
+
+for el in line_2:
+    while 'A' <= el <= 'Z':
+        line_3.append(el)
+
+print(line_3, end=' ')
