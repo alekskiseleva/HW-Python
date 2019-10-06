@@ -20,7 +20,6 @@
 # ()	Группирует выражение и возвращает найденный текст
 # \t, \n, \r	Символ табуляции, новой строки и возврата каретки соответственно
 
-
 import re
 
 line = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysmNO'\

@@ -8,7 +8,7 @@
 
 import re
 
-line_2 = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysm'\
+line_1 = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysm'\
        'NOGIPHpEMujalpPLNzRWXfwHQqwksrFeipEUlTLeclMwAoktKlfUBJHPsnawvjPhfgewV'\
        'fzKTUfSYtBydXaVIpxWjNKgXANvIoumesCSSvjEGRJosUfuhRRDUuTQwLlJJJDdkVjfSA'\
        'HqnLxooisBDWuxIhyjJaXDYwdoVPnsllMngNlmkpYOlqXEFIxPqqqgAWdJsOvqppOfyIV'\
@@ -27,7 +27,6 @@ line_2 = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysm'\
 line_2 = 'GAMkgAYEOmHBSQsSUHKvSfbmxULaysmNOGIPHpEMujalpPLNzRWXfwHQqwksrFeipEUlTLec'
 # нужно получить список строк: ['AY', 'NOGI', 'P']
 
-# Вывести символы в верхнем регистре, слева от которых находятся
-# два символа в нижнем регистре, а справа - два символа в верхнем регистре.
+print(re.findall('[a-z]{2}([A-Z]+)[A-Z]{2}', line_2))
 
-print(re.findall('[a-z]{2}([A-Z]{2})', line_2))
+print(re.findall('[a-z]{2}([A-Z]+)[A-Z]{2}', line_1))
