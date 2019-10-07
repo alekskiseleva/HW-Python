@@ -22,7 +22,7 @@ line = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysmNO' \
        'XiUWgsKQrDOeZoNlZNRvHnLgCmysUeKnVJXPFIzvdDyleXylnKBfLCjLHntltignbQoiQ' \
        'zTYwZAiRwycdlHfyHNGmkNqSwXUrxGc'
 
-#print(re.findall('[a-z]{1,}', line))
+print(re.findall('[a-z]{1,}', line))
 
 line_3 = []
 line_2 = 'mtMmEZUOmcq'
