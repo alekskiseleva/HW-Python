@@ -29,8 +29,12 @@ line_2 = 'mtMmEZUOmcq'
 i = 0
 
 for el in line_2:
-    while 'a' <= el <= 'z':
-        line_3.append(el)
 
+    if 'a' <= el <= 'z':
+        buff = buff+el
+
+    elif buff != '':
+        line_3.append(buff)
+        buff = ''
 
 print(line_3)
