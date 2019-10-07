@@ -28,12 +28,18 @@ line_2 = 'GAMkgAYEOmHBSQsSUHKvSfbmxULaysmNOGIPHpEMujalpPLNzRWXfwHQqwksrFeipEUlTL
 # нужно получить список строк: ['AY', 'NOGI', 'P']
 
 print(re.findall('[a-z]{2}([A-Z]+)[A-Z]{2}', line_2))
-
 print(re.findall('[a-z]{2}([A-Z]+)[A-Z]{2}', line_1))
+
+buff = ''
 line_3 = []
 
 for el in line_2:
-    while 'A' <= el <= 'Z':
-        line_3.append(el)
+
+       if 'A' <= el <= 'Z':
+           buff = buff + el
+
+       elif buff != '':
+              line_3.append(buff)
+              buff = ''
 
 print(line_3, end=' ')
