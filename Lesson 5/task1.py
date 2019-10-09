@@ -27,8 +27,8 @@ def make_dir():
         print('директория {} уже существует'.format(dir_name))
 
 
-#print('sys.argv = ', sys.argv)
-
+print('sys.argv = ', sys.argv)
+print('sys.executable = ', sys.executable)
 
 make_dir()
 try:
