@@ -30,7 +30,7 @@ def make_dir():
 #print('sys.argv = ', sys.argv)
 
 
-do = {"mkdir": make_dir}
+make_dir()
 try:
     dir_name = sys.argv[2]
 except IndexError:
