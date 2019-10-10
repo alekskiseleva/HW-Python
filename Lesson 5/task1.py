@@ -15,23 +15,16 @@
 import sys
 import os
 
-def make_dir():
-    if not dir_name:
-        print("Необходимо указать имя директории вторым параметром")
-        return
-    dir_path = os.path.join(os.getcwd(), dir_name)
+def make_dir(path):
+    dir_path = os.path.join(os.getcwd(), path)
+
     try:
         os.mkdir(dir_path)
-        print('директория {} создана'.format(dir_name))
+        print('директория {} создана'.format(dir_path))
     except FileExistsError:
-        print('директория {} уже существует'.format(dir_name))
+        print('директория {} уже существует'.format(dir_path))
 
+quantity_folder = [('dir_' + str(i + 1)) for i in range(9)]
 
-print('sys.argv = ', sys.argv)
-print('sys.executable = ', sys.executable)
-
-make_dir()
-try:
-    dir_name = sys.argv[2]
-except IndexError:
-    dir_name = None
+for i in quantity_folder:
+    make_dir(i)
