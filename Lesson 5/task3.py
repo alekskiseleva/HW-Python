@@ -6,3 +6,13 @@
 #shutil.copyfile(src, dst, follow_symlinks=True) - копирует содержимое (но не метаданные) файла src в файл dst. Возвращает dst (т.е. куда файл был скопирован). src и dst это строки - пути к файлам. dst должен быть полным именем файла.
 #shutil.copy(src, dst, follow_symlinks=True) - копирует содержимое файла src в файл или папку dst. Если dst является директорией, файл будет скопирован с тем же названием, что было в src. Функция возвращает путь к местонахождению нового скопированного файла.
 
+import os
+import shutil
+
+dir_path = os.path.join(os.getcwd())
+
+f = open('replica_task3.py', 'w')
+
+shutil.copy('task3.py', 'replica_task3.py')
+
+f.close()
