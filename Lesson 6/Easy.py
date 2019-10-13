@@ -9,28 +9,59 @@
 
 import math
 
-class myTriangle:
+class MyTriangle:
 
     #задаем атрибуты
+    x1
+    x2
+    x3
+    y1
+    y2
+    y3 #координаты точек
+    a
+    b
+    c
+    p #полупериметр
+    h #высота
+    per #периметр
+    Sq #площадь
+    h #высота треугольника
 
-    a = (x1, y1)
-    b = (x2, y2)
-    c = (x3, y3)
+  #задаем методы
 
+  #Задаем координаты
+    def coordinates(self):
+        x1, y1, x2, y2, x3, y3  = list(map(int, input().split()))  # ввод координат точек
 
-    def length (self):
-        a = math.sqrt(x1 **2 + y1 **2)
-        b = math.sqrt(x2 **2 + y2 **2)
-        c = math.sqrt(x2 **2 + y3 **2)
+  #вычисление сторон через векторы
+    def Tr_length (self):
+        a = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+        b = math.sqrt((x3 - x2)**2 + (y3 - y2)**2)
+        c = math.sqrt((x3 - x1)**2 + (y3 - y1)**2)
+        print(a, b, c)
 
-    def perimeter(self):
+  #Вычисление периметра
+    def Tr_perimeter(self):
         per = a + b + c
+        print(per)
 
-    def square(self):
-        Sq = 1/2 (a * h)
+  #Вычисление площади
+    def Tr_square(self):
+        Sq = (1/2) * a * h
+        print(Sq)
 
-    def height(self):
-        h_tr = 2 / a * (math.sqrt(per * (p - a)*(p - b)* (p - c))
+  #Вычисление высоты
+    def Tr_height(self):
+        p = (1/2) * per
+        h = (2 / a) * (math.sqrt(p * (p - a) * (p - b) * (p - c))
+        #print(p, h)
+
+
+    tie = MyTriangle()
+    tie.coordinates()
+    tie.Tr_length()
+
+
 
 
 
