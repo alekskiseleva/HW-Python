@@ -9,59 +9,53 @@
 
 import math
 
+
 class MyTriangle:
+    # задаем атрибуты
+      # координаты точек
 
-    #задаем атрибуты
-    x1
-    x2
-    x3
-    y1
-    y2
-    y3 #координаты точек
-    a
-    b
-    c
-    p #полупериметр
-    h #высота
-    per #периметр
-    Sq #площадь
-    h #высота треугольника
+    # a b c
+    # p #полупериметр
+    # h #высота
+    # per #периметр
+    # Sq #площадь
+    # h #высота треугольника
 
-  #задаем методы
+    # задаем методы
 
-  #Задаем координаты
+    # Задаем координаты
     def coordinates(self):
-        x1, y1, x2, y2, x3, y3  = list(map(int, input().split()))  # ввод координат точек
+        x1, y1 = list(map(int, input('Введите координаты точек').split()))
+        x2, y2 = list(map(int, input('Введите координаты точек').split()))
+        x3, y3 = list(map(int, input('Введите координаты точек').split()))  # ввод координат точек
+        print(x1, y1)
+        print(x2, y2)
+        print(x3, y3)
 
-  #вычисление сторон через векторы
-    def Tr_length (self):
-        a = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-        b = math.sqrt((x3 - x2)**2 + (y3 - y2)**2)
-        c = math.sqrt((x3 - x1)**2 + (y3 - y1)**2)
+    # вычисление сторон через векторы
+    def Tr_length(self):
+        a = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+        b = math.sqrt((x3 - x2) ** 2 + (y3 - y2) ** 2)
+        c = math.sqrt((x3 - x1) ** 2 + (y3 - y1) ** 2)
         print(a, b, c)
 
-  #Вычисление периметра
+    # Вычисление периметра
     def Tr_perimeter(self):
         per = a + b + c
         print(per)
 
-  #Вычисление площади
+    # Вычисление высоты
+    def Tr_height(self):
+        p = (1 / 2) * per
+        h = (2 / a) * (math.sqrt(p * (p - a) * (p - b) * (p - c)))
+        print(p, h)
+        # Вычисление площади
+
     def Tr_square(self):
-        Sq = (1/2) * a * h
+        Sq = (1 / 2) * a * h
         print(Sq)
 
-  #Вычисление высоты
-    def Tr_height(self):
-        p = (1/2) * per
-        h = (2 / a) * (math.sqrt(p * (p - a) * (p - b) * (p - c))
-        #print(p, h)
 
-
-    tie = MyTriangle()
-    tie.coordinates()
-    tie.Tr_length()
-
-
-
-
-
+trtr = MyTriangle()
+trtr.coordinates()
+trtr.Tr_length()
