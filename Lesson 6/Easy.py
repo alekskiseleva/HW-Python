@@ -6,3 +6,31 @@
 # Предусмотреть в классе методы:
 # проверка, является ли фигура равнобочной трапецией;
 # вычисления: длины сторон, периметр, площадь.
+
+import math
+
+class myTriangle:
+
+    #задаем атрибуты
+
+    a = (x1, y1)
+    b = (x2, y2)
+    c = (x3, y3)
+
+
+    def length (self):
+        a = math.sqrt(x1 **2 + y1 **2)
+        b = math.sqrt(x2 **2 + y2 **2)
+        c = math.sqrt(x2 **2 + y3 **2)
+
+    def perimeter(self):
+        per = a + b + c
+
+    def square(self):
+        Sq = 1/2 (a * h)
+
+    def height(self):
+        h_tr = 2 / a * (math.sqrt(per * (p - a)*(p - b)* (p - c))
+
+
+
