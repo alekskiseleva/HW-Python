@@ -1,12 +1,48 @@
-class Trapezes:
+# Задача-2: Написать Класс "Равнобочная трапеция", заданной координатами 4-х точек.
+# Предусмотреть в классе методы:
+# проверка, является ли фигура равнобочной трапецией;
+# вычисления: длины сторон, периметр, площадь.
 
-    def coordinates_trapeze():
-        x1, y1 = list(map(int, input('Введите координаты точки A(x1,y1): ').split()))
-        x2, y2 = list(map(int, input('Введите координаты точки B(x2,y2): ').split()))
-        x3, y3 = list(map(int, input('Введите координаты точки C(x3,y3): ').split()))
-        x4, y4 = list(map(int, input('Введите координаты точки D(x3,y3): ').split()))# ввод координат точек
-        print(x1, y1)
-        print(x2, y2)
-        print(x3, y3)
-        print(x4, y4)
-        return x1, x2, x3, x4, y1, y2, y3, y4
+import math
+
+
+class Trapezes:
+    # задаем атрибуты
+    x1, x2, x3, x4, y1, y2, y3, y4 = 0, 0, 0, 0, 0, 0
+    a, b, c, d, p, per = 0, 0, 0, 0, 0, 0
+
+    # координаты точек
+    def __init__(self):
+        self.x1, self.y1 = list(map(int, input('Введите координаты точки A(x1,y1): ').split()))
+        self.x2, self.y2 = list(map(int, input('Введите координаты точки B(x2,y2): ').split()))
+        self.x3, self.y3 = list(map(int, input('Введите координаты точки C(x3,y3): ').split()))
+        self.x4, self.y4 = list(map(int, input('Введите координаты точки C(x3,y3): ').split()))
+
+    # вычисление сторон через векторы
+    def trpz_length(self):
+        self.a = math.sqrt((self.x2 - self.x1) ** 2 + (self.y2 - self.y1) ** 2)
+        self.b = math.sqrt((self.x3 - self.x2) ** 2 + (self.y3 - self.y2) ** 2)
+        self.c = math.sqrt((self.x3 - self.x1) ** 2 + (self.y3 - self.y1) ** 2)
+        self.d = math.sqrt((self.x4 - self.x3) ** 2 + (self.y4 - self.y3) ** 2)
+        print('\nДлины сторон треугольника: ', '\n  a = ', self.a, '\n  b = ', self.b, '\n  c = ', self.c', '\n  d = ', self.d)
+
+    #определяем является ли фигура равнобедренной трапецией
+    def trpz_isosceles:
+        pass
+
+    # Вычисление периметра
+    def trpz_perimeter(self):
+        self.per = self.a + self.b + self.c +  self.d
+        print('Периметр треугольника: ', self.per)
+
+    # Вычисление площади
+    def trpz_square(self):
+        self.Sq = (a + b)/2 * (math.sqrt(c**2 - (((a - b)**2)/4))
+        print('Площадь треугольника: ', self.Sq)
+
+
+trpz = Triangles()
+trpz.trpz_isosceles()
+trpz.tr_length()
+trpz.tr_perimeter()
+trpz.tr_square()
