@@ -50,20 +50,20 @@ class Triangles:
         p = (1 / 2) * per
         h = (2 / a) * (math.sqrt(p * (p - a) * (p - b) * (p - c)))
         print('Высота треугольника: ', p, h)
-        # Вычисление площади
 
+    # Вычисление площади
     def tr_square(self):
         Sq = (1 / 2) * a * h
         print('Площадь треугольника: ', Sq)
 
 
 class Trapezes:
-
+    # ввод координат точек
     def coordinates_trapeze():
         x1, y1 = list(map(int, input('Введите координаты точки A(x1,y1): ').split()))
         x2, y2 = list(map(int, input('Введите координаты точки B(x2,y2): ').split()))
         x3, y3 = list(map(int, input('Введите координаты точки C(x3,y3): ').split()))
-        x4, y4 = list(map(int, input('Введите координаты точки D(x3,y3): ').split()))# ввод координат точек
+        x4, y4 = list(map(int, input('Введите координаты точки D(x3,y3): ').split()))
         print(x1, y1)
         print(x2, y2)
         print(x3, y3)
