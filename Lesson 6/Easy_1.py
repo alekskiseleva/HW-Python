@@ -24,7 +24,7 @@ class Triangles:
 
     # Вычисление периметра
    def tr_perimeter(self):
-       self.per = self.a + self.b + self.c
+       self.per = self.a + self.b + self.c + self.d
        print('Периметр треугольника: ', self.per)
 
     # Вычисление высоты
