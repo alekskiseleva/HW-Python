@@ -27,7 +27,9 @@ class Trapezes:
         print('\nДлины сторон трапеции: ', '\n  a = ', self.a, '\n  b = ', self.b, '\n  c = ', self.c, '\n  c = ', self.d)
 
     #определяем является ли фигура равнобедренной трапецией
-    #def trpz_isosceles:       pass
+    #def trpz_isosceles:
+    # sort = a, b, c, d
+    # pass
 
     # Вычисление периметра
     def trpz_perimeter(self):
