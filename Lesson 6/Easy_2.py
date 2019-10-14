@@ -8,8 +8,8 @@ import math
 
 class Trapezes:
     # задаем атрибуты
-    x1, x2, x3, x4, y1, y2, y3, y4 = 0, 0, 0, 0, 0, 0
-    a, b, c, d, p, per = 0, 0, 0, 0, 0, 0
+    x1, x2, x3, x4, y1, y2, y3, y4 = 0, 0, 0, 0, 0, 0, 0, 0
+    a, b, c, d, p, per, Sq = 0, 0, 0, 0, 0, 0, 0
 
     # координаты точек
     def __init__(self):
@@ -24,25 +24,25 @@ class Trapezes:
         self.b = math.sqrt((self.x3 - self.x2) ** 2 + (self.y3 - self.y2) ** 2)
         self.c = math.sqrt((self.x3 - self.x1) ** 2 + (self.y3 - self.y1) ** 2)
         self.d = math.sqrt((self.x4 - self.x3) ** 2 + (self.y4 - self.y3) ** 2)
-        print('\nДлины сторон треугольника: ', '\n  a = ', self.a, '\n  b = ', self.b, '\n  c = ', self.c', '\n  d = ', self.d)
+        print('\nДлины сторон трапеции: ', '\n  a = ', self.a, '\n  b = ', self.b, '\n  c = ', self.c, '\n  c = ', self.d)
 
     #определяем является ли фигура равнобедренной трапецией
-    def trpz_isosceles:
-        pass
+    #def trpz_isosceles:       pass
 
     # Вычисление периметра
     def trpz_perimeter(self):
         self.per = self.a + self.b + self.c +  self.d
-        print('Периметр треугольника: ', self.per)
+        print('Периметр трапеции: ', self.per)
 
     # Вычисление площади
     def trpz_square(self):
-        self.Sq = (a + b)/2 * (math.sqrt(c**2 - (((a - b)**2)/4))
-        print('Площадь треугольника: ', self.Sq)
+        self.Sq = (self.a + self.b)/2 * (math.sqrt(self.c**2 - (((self.a - self.b)**2)/4)))
+        print('Площадь трапеции: ', self.Sq)
 
 
-trpz = Triangles()
-trpz.trpz_isosceles()
-trpz.tr_length()
-trpz.tr_perimeter()
-trpz.tr_square()
+
+trpz = Trapezes()
+#trpz.trpz_isosceles()
+trpz.trpz_length()
+trpz.trpz_perimeter()
+trpz.trpz_square()
