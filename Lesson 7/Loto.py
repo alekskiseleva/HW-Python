@@ -9,33 +9,38 @@
 #	Если цифра есть на карточке - игрок проигрывает и игра завершается.
 #	Если цифры на карточке нет - игра продолжается.
 # Побеждает тот, кто первый закроет все числа на своей карточке.
+import random
 
 class CardLoto:
 
     def __init__(self):
-        self.card_loto = []
+
+        self.crd_lt = []
 
     def generator_card(self):
+        self.crd_lt = [random.randint(0, 90) for i in range(1, 6)]     #генератор строк
 
-        for i in range(3):
-            for j in range(5):
-                for bar in range(1, 90):
-                   self.card_loto.append(bar)
-                   print(self.card_loto[i][j])
+    def crd_lt_print(self):
 
-class Barrel:
+        print('  '.join(str(i) for i in self.crd_lt))
+        print('  '.join(str(j) for j in self.crd_lt))
+        print('  '.join(str(z) for z in self.crd_lt))
 
-    def __init__(self):
-        self.keg = []
 
-    def generator_keg(self):
-        for i in range(1, 90):
-            self.keg.append(i)
-            print(self.keg)
+#class Barrel:
+
+#    def __init__(self):
+#        self.keg = []
+
+#    def generator_keg(self):
+#        for i in range(1, 90):
+#            self.keg.append(i)
+#            print(self.keg)
 
 
 loto_game = CardLoto()
 loto_game.generator_card()
+loto_game.crd_lt_print()
 
-step = Barrel()
-step.generator_keg()
+#step = Barrel()
+#step.generator_keg()
