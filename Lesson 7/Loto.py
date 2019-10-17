@@ -18,13 +18,9 @@ class CardLoto:
         self.crd_lt = []
 
     def generator_card(self):
-        self.crd_lt = [[random.randint(0, 90) for i in range(1, 6)] for i in range(3)]
-
-        self.crd_lt = sorted(self.crd_lt)
-
+        self.crd_lt = [sorted([random.randint(0, 90) for i in range(1, 6)]) for i in range(3)]
         for i in self.crd_lt:
             print(('{:>3} ' * len(i)).format(*i))
-
 
 #class Barrel:
 
