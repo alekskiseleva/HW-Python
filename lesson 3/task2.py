@@ -14,14 +14,8 @@ def sort_to_max(lst_dz3):
         for j in range(n - i - 1):
 
             if lst_dz3[j] > lst_dz3[j + 1]:
-                b = lst_dz3[j]  # буферная переменная
-                lst_dz3[j] = lst_dz3[j + 1]
-                lst_dz3[j + 1] = b
+                lst_dz3[j + 1], lst_dz3[j] = lst_dz3[j], lst_dz3[j + 1]
 
-    return
-
-
-lst_dz3 = []
 
 n = int(input("Введите количество элементов для списка: "))
 
