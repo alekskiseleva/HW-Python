@@ -22,19 +22,22 @@ line = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysmNO' \
        'XiUWgsKQrDOeZoNlZNRvHnLgCmysUeKnVJXPFIzvdDyleXylnKBfLCjLHntltignbQoiQ' \
        'zTYwZAiRwycdlHfyHNGmkNqSwXUrxGc'
 
-print(re.findall('[a-z]{1,}', line))
+print(re.findall("[a-z]{1,}", line))
 
 line_3 = []
 line_2 = 'mtMmEZUOmcq'
 i = 0
+buff = ''
 
 for el in line_2:
 
     if 'a' <= el <= 'z':
-        buff = buff+el
+        buff = buff + el
 
     elif buff != '':
         line_3.append(buff)
         buff = ''
 
+
+line_3.append(buff)
 print(line_3)
