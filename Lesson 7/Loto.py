@@ -14,15 +14,19 @@ import random
 
 class CardLoto:
 
+
     def __init__(self):
         self.crd_lt = []
 
     def generator_card(self):
-        self.crd_lt = [sorted([random.randint(0, 90) for i in range(1, 6)]) for i in range(3)]
+
+        self.crd_lt = [(sorted(random.sample(range(1, 91), 9))) for i in range(5)]
+
         for i in self.crd_lt:
             print(('{:>3} ' * len(i)).format(*i))
 
-#class Barrel:
+
+# class Barrel:
 
 #    def __init__(self):
 #        self.keg = []
@@ -32,10 +36,27 @@ class CardLoto:
 #            self.keg.append(i)
 #            print(self.keg)
 
+class Bag:
+    def __init__(self):
+        self.keg = []
+
+    def kegs(self):
+        self.keg = random.sample(range(1, 91), 1)
+        print("Новый бочонок: {}".format(self.keg))
+        return self
+
+
+
 
 loto_game = CardLoto()
+Bochonok = Bag()
+Bochonok.kegs()
+print("----------Карточка игрока-----------")
 loto_game.generator_card()
-loto_game.crd_lt_print()
+print("------------------------------------")
 
-#step = Barrel()
-#step.generator_keg()
+print("-------Карточка компьютера----------")
+loto_game.generator_card()
+print("------------------------------------")
+# step = Barrel()
+# step.generator_keg()
