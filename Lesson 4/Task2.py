@@ -33,6 +33,9 @@ print(re.findall('[a-z]{2}([A-Z]+)[A-Z]{2}', line_1))
 buff = ''
 line_3 = []
 
+#Вывести символы в верхнем регистре, слева от которых находятся два символа в нижнем регистре, а справа - два символа в верхнем регистре.
+
+
 for el in line_2:
 
        if 'A' <= el <= 'Z':
@@ -42,4 +45,6 @@ for el in line_2:
               line_3.append(buff)
               buff = ''
 
+
+line_3.append(buff)
 print(line_3, end=' ')
