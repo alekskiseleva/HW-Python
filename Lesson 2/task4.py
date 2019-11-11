@@ -6,14 +6,16 @@ __author__ = 'Киселева Александра'
 
 from random import randint
 
-my_list = [randint(0, 100) for i in range(10)]
+my_list = [randint(0, 100) for i in range(30)]
+#my_list = [1, 2, 4, 6, 8, 5, 6, 2, 5, 2, 9, 11, 0, 7]
 
-print('Список, заполненный произвольными целыми числами\n', my_list)
+print('Список, заполненный произвольными целыми числами:')
+for i in my_list:
+   print(i, end=' ')
 
-d = set(my_list)
-lst2 = list(d)
+#создаем словарь, в котором количество вхождений элементов в строке не больше 1
+mlst = dict((x, my_list.count(x)) for x in my_list if my_list.count(x) == 1)
 
-if lst2 == my_list:
-    print('Уникальных значений не было')
-else:
-    print('Список с уникальными значениями\n', lst2)
+print('\nСписок из уникальных элементов первого:')
+for key in mlst:
+   print(key, end=' ')
