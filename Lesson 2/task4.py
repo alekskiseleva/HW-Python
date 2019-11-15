@@ -6,16 +6,36 @@ __author__ = 'Киселева Александра'
 
 from random import randint
 
-my_list = [randint(0, 100) for i in range(30)]
+# my_list = [randint(0, 100) for i in range(30)]
 #my_list = [1, 2, 4, 6, 8, 5, 6, 2, 5, 2, 9, 11, 0, 7]
+
+my_list = [1, 1, 2, 2, 3, 3]
 
 print('Список, заполненный произвольными целыми числами:')
 for i in my_list:
-   print(i, end=' ')
+    print(i, end=' ')
 
-#создаем словарь, в котором количество вхождений элементов в строке не больше 1
-mlst = dict((x, my_list.count(x)) for x in my_list if my_list.count(x) == 1)
+mdict = dict()
 
-print('\nСписок из уникальных элементов первого:')
-for key in mlst:
-   print(key, end=' ')
+for x in my_list:
+
+   if x not in mdict:
+      mdict[x] = x
+
+mdict[x] = mdict[x] + 1
+
+print(mdict)
+lst = []
+
+for k, v in mdict.items():
+
+    if v == 1:
+        lst.append(k)
+
+if lst == '':
+
+    print('Список пуст')
+
+else:
+    print('Cписок уникальных элементов исходного:')
+    print(lst)
