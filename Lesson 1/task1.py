@@ -1,5 +1,3 @@
-import math
-
 __author__ = 'Киселева Александра'
 
 # Задача-1: Дано произвольное целое число, вывести самую большую цифру этого числа.
@@ -11,21 +9,20 @@ __author__ = 'Киселева Александра'
 # * постарайтесь решить задачу с применением арифметики и цикла while;
 # * при желании и понимании решите задачу с применением цикла for.
 
-number = int(input('Введите произвольное целое число: '))
-quantity = int(math.log10(number))+1
+number = str(input('Введите произвольное целое число: '))
+quantity = len(number)
 
 
 print('Вы ввели число', number)
 print('Число цифр: ', quantity)
 
-num = list(str(number))
+maximum = ''
 
-for i in range(1, quantity-1):
+for i in number:
 
-    maximum = num[0]
-
-    if num[i] > maximum:
-        maximum = num[i]
+    if i > maximum:
+        maximum = i
 
 print('Максимальная цифра числа: ', maximum)
+
 
