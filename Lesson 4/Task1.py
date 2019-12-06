@@ -38,6 +38,8 @@ for el in line_2:
         line_3.append(buff)
         buff = ''
 
+if buff != '':
+    line_3.append(buff)
 
-line_3.append(buff)
 print(line_3)
+
