@@ -9,20 +9,28 @@ from random import randint
 
 
 def sort_to_max(lst_dz3):
+
+    n = len(lst_dz3)
     for i in range(n):
 
         for j in range(n - i - 1):
+            a, b = lst_dz3[j], lst_dz3[j + 1]
 
-            if lst_dz3[j] > lst_dz3[j + 1]:
-                lst_dz3[j + 1], lst_dz3[j] = lst_dz3[j], lst_dz3[j + 1]
+            if a > b:
+                lst_dz3[j], lst_dz3[j + 1] = b, a
 
 
-n = int(input("Введите количество элементов для списка: "))
+m = int(input("Введите количество элементов для списка: "))
 
-lst_dz3 = [randint(-100, 100) for i in range(n)]
+lst_dz3 = [randint(-100, 100) for i in range(m)]
 
-print(lst_dz3, end=' ')
+print('Исходный список:')
+for i in lst_dz3:
+    print(i, end=' ')
 
+print()
+
+print('Отсортированный список:')
 sort_to_max(lst_dz3)
-
-print('\nОтсортированный список:\n', lst_dz3, end=' ')
+for i in lst_dz3:
+    print(i, end=' ')
