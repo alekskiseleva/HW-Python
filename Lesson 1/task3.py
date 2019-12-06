@@ -27,14 +27,13 @@ else:
     A = 2 * a
     D = (b ** 2) - (2 * A * c)
 
-
     if D > 0:
 
         sqrt = math.sqrt(D)
 
         x1 = (-b + sqrt) / A
         x2 = (-b - sqrt) / A
-        print('Уравнение имеет 2 корня\n', 'х1 = ', x1, '\n x2 = ', x2)
+        print('Уравнение имеет 2 корня x1 = {}, x2 = {}'.format(x1, x2))
 
     elif D == 0:
         x = -b / (2 * a)
