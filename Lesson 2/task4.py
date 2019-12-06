@@ -9,7 +9,7 @@ from random import randint
 # my_list = [randint(0, 100) for i in range(30)]
 #my_list = [1, 2, 4, 6, 8, 5, 6, 2, 5, 2, 9, 11, 0, 7]
 
-my_list = [1, 1, 2, 2, 3, 3]
+my_list = [10, 1, 2, 3, 3]
 
 print('Список, заполненный произвольными целыми числами:')
 for i in my_list:
@@ -18,11 +18,10 @@ for i in my_list:
 mdict = dict()
 
 for x in my_list:
-
-   if x not in mdict:
-      mdict[x] = x
-
-mdict[x] = mdict[x] + 1
+    if x not in mdict:
+        mdict[x] = 1
+    else:
+        mdict[x] = mdict[x] + 1
 
 print(mdict)
 lst = []
