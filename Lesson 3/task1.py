@@ -28,6 +28,5 @@ def fibonacci(n, m):
 n = int(input("Номер n элемента ряда Фибоначчи: "))
 m = int(input("Номер m элемента ряда Фибоначчи: "))
 
-fibonacci(n, m)
-for i in fib_list:
-    print(i, end=' ')
+
+print(fibonacci(n, m))
