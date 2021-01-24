@@ -16,11 +16,11 @@ my_list = [randint(-100, 100) for i in range(10)]
 
 print('1. Список произвольных целых чисел от -100 до 100:\n', my_list)
 
-for el in my_list:
+for lol in my_list:
 
-    if el > 0:
-        d = round(math.sqrt(el), 6)
-        c = d**2 - (el)
+    if lol > 0:
+        d = round(math.sqrt(lol), 6)
+        c = d**2 - (lol)
         if c == 0:
             lst.append(int(d))
 
